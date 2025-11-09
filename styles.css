@@ -1,0 +1,230 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navegación principal */
+.top-header {
+  position: fixed;
+  top: 60px; /* debajo del banner */
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.logo img {
+  margin-right: 30px;
+}
+
+.Menu-Horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0;
+  padding: 0;
+}
+
+.Menu-Horizontal li {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.Menu-Horizontal li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.Menu-Horizontal li a:hover {
+  color: red;
+}
+
+/* Submenú vertical */
+.Menu-Vertical {
+  list-style: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  display: none;
+  background-color: azure;
+  width: 180px;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Menu-Vertical li {
+  padding: 10px 15px;
+}
+
+.Menu-Vertical li:hover {
+  background-color: blue;
+}
+
+.Menu-Vertical li a {
+  color: black;
+}
+
+.Menu-Horizontal li:hover .Menu-Vertical {
+  display: block;
+}
+
+/* Sección productos */
+.seccion-producto {
+  padding: 150px 20px 60px; /* deja espacio para banner y menú */
+  background-color: white;
+}
+
+.cont-gral-productos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 60px;
+}
+
+.cont-prod-texto {
+  flex: 1;
+}
+
+.cont-prod-texto h2 {
+  color: blue;
+  margin-bottom: 15px;
+}
+
+.cont-prod-texto p {
+  color: black;
+  line-height: 1.5;
+}
+
+.cont-prod-imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.cont-prod-imagen img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Sección beneficios */
+.seccion-beneficio {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.cont-gral-beneficio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 60px;
+  flex-wrap: wrap; /* para hacerlo responsivo */
+}
+
+.cont-benef-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.cont-benef-texto h2 {
+  color: darkgreen;
+  margin-bottom: 15px;
+}
+
+.cont-benef-texto p {
+  color: #333;
+  line-height: 1.5;
+}
+
+.cont-benef-video {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.cont-benef-video iframe {
+  width: 100%;
+  max-width: 500px;
+  height: 280px;
+  border-radius: 10px;
+  border: none;
+}
+
+/*seccion formulario*/
+
+.seccion-formulario {
+  background-color: aqua;
+  padding: 40px;
+  border: 3px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.div-cont-formulario {
+  background-color: white;
+  padding: 30px;
+  border: 2px solid mintcream;
+  border-radius: 10px;
+  width: 100%;
+  min-width: 500px;
+}
+
+.campo {
+  border: 1px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: bisque;
+}
+
+.formulario label {
+  display: flex;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: blue;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.lista-checkbox,
+.lista-radio {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid cadetblue;
+  background-color: #e0f0f0;
+  border-radius: 8px;
+}
+
+.lista-checkbox li,
+.lista-radio li {
+  margin-bottom: 8px;
+}
+
+button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
