@@ -4,52 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Proyecto personal</title>
+    <title>Sabores del Mundo - Landing Page</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Banner superior -->
-    <header class="banner">
-      <h1>Sabores del mundo Peru</h1>
-    </header>
-<!--main-->
-
-    <!-- Menú de navegación -->
+    <!-- Banner de navegación -->
     <nav class="top-header">
-      <a href="#" class="logo">
-        <img src="imagenes/logotipo.png" alt="Logotipo" height="40" />
+      <a href="index.html" class="logo">
+        <img src="assets/img/logotipo.png" alt="Logotipo" height="40" />
       </a>
 
       <ul class="Menu-Horizontal">
-        <li><a href="index2.html">Productos</a></li>
         <li>
-          <a href="#">Soluciones</a>
+          <a href="#inicio">Inicio</a>
           <ul class="Menu-Vertical">
-            <li><a href="#">Banca Móvil</a></li>
-            <li><a href="#">Banca Internet</a></li>
-            <li><a href="#">Yape</a></li>
-            <li><a href="#">Cocos y Lucas</a></li>
+            <li><a href="#inicio">Presentacion</a></li>
+            <li><a href="#objetivos">Objetivos</a></li>
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#formulario">Formulario</a></li>
           </ul>
         </li>
-        <li><a href="#">Beneficios</a></li>
-        <li><a href="#">Ayuda</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#auspiciadores">Auspiciadores</a></li>
       </ul>
+
+      <div class="botones-header">
+        <a href="iniciar-sesion.html" class="btn-iniciar-sesion">Iniciar sesion</a>
+        <a href="registrarse.html" class="btn-registrarse">Registrarse</a>
+      </div>
     </nav>
 
+    <!-- Sección 1: Hero / Pantalla Principal -->
+    <section class="seccion-hero" id="inicio">
+      <div class="cont-gral-hero">
+        <div class="cont-hero-texto">
+          <h1 class="titulo-principal">RECETA<br />COCINA<br />DISFRUTA</h1>
+          <p class="subtitulo-hero">
+            Los Sabores Del Mundo en una sola pagina
+          </p>
+          <a href="descargar.html" class="btn-descargar">Descargar</a>
+        </div>
 
+        <div class="cont-hero-imagen">
+          <img src="assets/img/comida.jpeg" alt="Comida del mundo" />
+        </div>
+      </div>
+    </section>
 
-
-
-
-
-
-
-
-    <!-- Sección de productos -->
-    <section class="seccion-producto">
-      <div class="cont-gral-productos">
-        <div class="cont-prod-texto">
-          <h2>Sección Productos</h2>
+    <!-- Sección 2: Objetivos -->
+    <section class="seccion-objetivos" id="objetivos">
+      <div class="cont-gral-objetivos">
+        <div class="cont-obj-texto">
+          <h2>Objetivos</h2>
           <p>
             Descubre los sabores más exquisitos de diferentes partes del mundo.
             Nuestra selección de productos te llevará en un viaje gastronómico
@@ -57,17 +63,17 @@
           </p>
         </div>
 
-        <div class="cont-prod-imagen">
-          <img src="imagenes/cev.jpg" alt="Producto destacado" />
+        <div class="cont-obj-imagen">
+          <img src="assets/img/ceviche.png" alt="Ceviche" />
         </div>
       </div>
     </section>
 
-    <!-- Sección de beneficios -->
-    <section class="seccion-beneficio">
-      <div class="cont-gral-beneficio">
+    <!-- Sección 3: Beneficios -->
+    <section class="seccion-beneficios" id="beneficios">
+      <div class="cont-gral-beneficios">
         <div class="cont-benef-texto">
-          <h2>Sección Beneficios</h2>
+          <h2>Beneficios</h2>
           <p>
             Conoce los beneficios de disfrutar nuestros productos. Cada receta
             está pensada para brindarte sabor, salud y una experiencia
@@ -80,8 +86,7 @@
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/P1fBdWJTWIk
-            "
+            src="https://www.youtube.com/embed/P1fBdWJTWIk"
             title="Video de Beneficios"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -92,317 +97,99 @@
       </div>
     </section>
 
-    <!-- Sección de contactos -->
-    <section lcass="seccion-formulario">
+    <!-- Sección 4: Formulario -->
+    <section class="seccion-formulario" id="formulario">
       <div class="div-cont-formulario">
-        <h2>Formulario de Registro</h2>
+        <h2>Formulario de Consulta</h2>
         <p>Complete todos los campos</p>
 
-<form class="formulario">
-
-
-
-        <div class="campo">
-          <label for="nombre">Nombres completos:</label>
-        </div>
-
-        <div class="campo">
-          <input
-            type="text"
-            name="nombre"
-            id="nombre"
-            placeholder="ingrese sus nombres"
-          />
-        </div>
-        <div class="campo">
-          <label for="nombre">Pais:</label>
-          <select name="pais" id="pais">
-            <option value="">selecciona un pais</option>
-            <option value="Peru">Peru</option>
-            <option value="Chile">Chile</option>
-
-          </select>
+        <form class="formulario">
           <div class="campo">
-            <label>Intereses:</label>
-            <ul class="lista-checkbox">
-              <li>
-                <label>
-                  <input type="checkbox" name="intereses" value="teconologia" />
-                  Tecnologia
-                </label>
-              </li>
-
-              <li>
-                <label>
-                  <input type="checkbox" name="intereses" value="teconologia" />
-                  Tecnologia
-                </label>
-              </li>
-
-              <li>
-                <label>
-                  <input type="checkbox" name="intereses" value="teconologia" />
-                  Tecnologia
-                </label>
-              </li>
-
-              <li>
-                <label>
-                  <input type="checkbox" name="intereses" value="teconologia" />
-                  Tecnologia
-                </label>
-              </li>
-            </ul>
-
-            <!-- Radio Button -->
-            <div class="campo">
-              <label>Sexo: </label>
-              <ul class="lista-radio">
-                <li>
-                  <label>
-                    <input type="radio" name="genero" value="masculino" />
-                    Masculino
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="radio" name="genero" value="femenino" />
-                    Femenino
-                  </label>
-                </li>
-              </ul>
-<button type="submit">Enviar</button>
-
-            </form>
-
-            </div>
+            <label for="nombre">Nombre:</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Ingrese su nombre"
+            />
           </div>
-        </div>
+
+          <div class="campo">
+            <label for="pais">País:</label>
+            <select name="pais" id="pais">
+              <option value="">Selecciona un país</option>
+              <option value="Peru">Perú</option>
+              <option value="Chile">Chile</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Mexico">México</option>
+              <option value="Espana">España</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="receta">Receta a consultar:</label>
+            <input
+              type="text"
+              name="receta"
+              id="receta"
+              placeholder="Ingrese la receta que desea consultar"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="numero">Número:</label>
+            <input
+              type="tel"
+              name="numero"
+              id="numero"
+              placeholder="Ingrese su número de contacto"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="consulta">Consulta:</label>
+            <textarea
+              name="consulta"
+              id="consulta"
+              rows="4"
+              placeholder="Escriba su consulta aquí"
+            ></textarea>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
       </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-item">
+          <img src="assets/iconos/Ico_Person.png" alt="Icono Persona" class="footer-icon" />
+          <a href="quienes-somos.html" class="footer-titulo">¿Quienes somos?</a>
+          <p class="footer-descripcion">Conocenos</p>
+        </div>
 
- <!-- Enlaces legales -->
- <div class="footer-links">
-  <h4>Legal</h4>
-  <a href=""
-    >Política de Privacidad</a
-  >
-  <!-- Dentro de href llama a un documento pdf con la poltica-->
-  <a href="#">Términos y Condiciones</a>
-  <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
-  <a href="https://drive.google.com/file/d/1hy8DUA35w7mZgllGJAzdHf-sm3ebpR0D/view?usp=sharing">Protección de Datos</a>
-</div>
+        <div class="footer-item">
+          <img src="assets/iconos/Ico_Caracte.png" alt="Icono Caracteristicas" class="footer-icon" />
+          <a href="caracteristicas.html" class="footer-titulo">Caracteristicas</a>
+          <p class="footer-descripcion">Estas son nuestras caracteristicas</p>
+        </div>
 
-<!-- Redes sociales con íconos personalizados -->
-<div class="footer-social">
-  <h4>Síguenos</h4>
-  <a href="#"
-    ><img
-      src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
-      alt="Facebook"
-      class="social-icon"
-  /></a>
-  <a href="#"
-    ><img
-      src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
-      alt="Instagram"
-      class="social-icon"
-  /></a>
-  <a href="#"
-    ><img
-      src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
-      alt="LinkedIn"
-      class="social-icon"
-  /></a>
-  <a href="#"
-    ><img
-      src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
-      alt="Twitter"
-      class="social-icon"
-  /></a>
-</div>
-</div>
-</footer>
-</section>
+        <div class="footer-item">
+          <img src="assets/iconos/Ico_Vision.png" alt="Icono Vision" class="footer-icon" />
+          <a href="vision.html" class="footer-titulo">Vision</a>
+          <p class="footer-descripcion">Lideres en recetas</p>
+        </div>
 
-
+        <div class="footer-item">
+          <img src="assets/iconos/Ico_Red.png" alt="Icono Redes" class="footer-icon" />
+          <a href="redes.html" class="footer-titulo">Siguenos</a>
+          <p class="footer-descripcion">Nuestras redes</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
 
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Proyecto personal</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Banner superior -->
-    <header class="banner">
-      <h1>Sabores del mundo Peru Lima</h1>
-    </header>
-<!--cambio desde rama al principal->
-    <!-- Menú de navegación -->
-    <nav class="top-header">
-      <a href="#" class="logo">
-        <img src="imagenes/logotipo.png" alt="Logotipo" height="40" />
-      </a>
-
-      <ul class="Menu-Horizontal">
-        <li><a href="index2.html">Productos</a></li>
-        <li>
-          <a href="#">Soluciones</a>
-          <ul class="Menu-Vertical">
-            <li><a href="#">Banca Móvil</a></li>
-            <li><a href="#">Banca Internet</a></li>
-            <li><a href="#">Yape</a></li>
-            <li><a href="#">Cocos y Lucas</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Beneficios</a></li>
-        <li><a href="#">Ayuda</a></li>
-      </ul>
-    </nav>
-
-    <!-- Sección de productos -->
-    <section class="seccion-producto">
-      <div class="cont-gral-productos">
-        <div class="cont-prod-texto">
-          <h2>Sección Productos</h2>
-          <p>
-            Descubre los sabores más exquisitos de diferentes partes del mundo.
-            Nuestra selección de productos te llevará en un viaje gastronómico
-            único.
-          </p>
-        </div>
-
-        <div class="cont-prod-imagen">
-          <img src="imagenes/cev.jpg" alt="Producto destacado" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección de beneficios -->
-    <section class="seccion-beneficio">
-      <div class="cont-gral-beneficio">
-        <div class="cont-benef-texto">
-          <h2>Sección Beneficios</h2>
-          <p>
-            Conoce los beneficios de disfrutar nuestros productos. Cada receta
-            está pensada para brindarte sabor, salud y una experiencia
-            inolvidable. Mira el siguiente video y descubre por qué somos la
-            mejor opción para los amantes de la buena comida.
-          </p>
-        </div>
-
-        <div class="cont-benef-video">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/P1fBdWJTWIk
-            "
-            title="Video de Beneficios"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección de contactos -->
-    <section lcass="seccion-formulario">
-      <div class="div-cont-formulario">
-        <h2>Formulario de Registro</h2>
-        <p>Complete todos los campos</p>
-
-<form class="formulario">
-
-
-
-        <div class="campo">
-          <label for="nombre">Nombres completos:</label>
-        </div>
-
-        <div class="campo">
-          <input
-            type="text"
-            name="nombre"
-            id="nombre"
-            placeholder="ingrese sus nombres"
-          />
-        </div>
-        <div class="campo">
-          <label for="nombre">Pais:</label>
-          <select name="pais" id="pais">
-            <option value="">selecciona un pais</option>
-            <option value="Peru">Peru</option>
-            <option value="Chile">Chile</option>
-
-          </select>
-          <div class="campo">
-            <label>Intereses:</label>
-            <ul class="lista-checkbox">
-              <li>
-                <label>
-                  <input type="checkbox" name="intereses" value="teconologia" />
-                  Tecnologia
-                </label>
-              </li>
-
-              <li>
-                <label>
-                  <input type="checkbox" name="intereses" value="teconologia" />
-                  Tecnologia
-                </label>
-              </li>
-
-              <li>
-                <label>
-                  <input type="checkbox" name="intereses" value="teconologia" />
-                  Tecnologia
-                </label>
-              </li>
-
-              <li>
-                <label>
-                  <input type="checkbox" name="intereses" value="teconologia" />
-                  Tecnologia
-                </label>
-              </li>
-            </ul>
-
-            <!-- Radio Button -->
-            <div class="campo">
-              <label>Sexo: </label>
-              <ul class="lista-radio">
-                <li>
-                  <label>
-                    <input type="radio" name="genero" value="masculino" />
-                    Masculino
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input type="radio" name="genero" value="femenino" />
-                    Femenino
-                  </label>
-                </li>
-              </ul>
-<button type="submit">Enviar</button>
-
-            </form>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer></footer>
-  </body>
-</html>
