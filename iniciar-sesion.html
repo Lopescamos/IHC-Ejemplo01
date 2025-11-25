@@ -28,33 +28,25 @@
         <div class="login-form-container">
           <h1 class="login-titulo">Iniciar Sesion</h1>
 
-          <form class="login-form">
-            <div class="input-container">
-              <img
-                src="assets/iconos/Ico_user.png"
-                alt="Usuario"
-                class="input-icon"
-              />
+          <form class="login-form" onsubmit="validarLogin(event)">
+            <div class="input-group">
+              <label for="usuario" class="login-label">Usuario:</label>
               <input
-                type="password"
+                type="text"
                 name="usuario"
                 id="usuario"
-                placeholder="ingrese usuario"
+                placeholder="Ingresa tu usuario"
                 class="login-input"
               />
             </div>
 
-            <div class="input-container">
-              <img
-                src="assets/iconos/Ico_Contra.png"
-                alt="Contraseña"
-                class="input-icon"
-              />
+            <div class="input-group">
+              <label for="password" class="login-label">Contraseña:</label>
               <input
                 type="password"
                 name="contraseña"
-                id="contraseña"
-                placeholder="ingrese contraseña"
+                id="password"
+                placeholder="Ingresa tu contraseña"
                 class="login-input"
               />
             </div>
@@ -86,5 +78,6 @@
         </div>
       </div>
     </div>
+    <script src="login.js"></script>
   </body>
 </html>

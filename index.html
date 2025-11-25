@@ -8,31 +8,46 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Banner de navegación -->
-    <nav class="top-header">
-      <a href="index.html" class="logo">
-        <img src="assets/img/logotipo.png" alt="Logotipo" height="40" />
-      </a>
+<!-- Banner de navegación -->
+<nav class="top-header">
+  <a href="index.html" class="logo">
+    <img src="assets/img/logotipo.png" alt="Logotipo" height="40" />
+  </a>
 
-      <ul class="Menu-Horizontal">
-        <li>
-          <a href="#inicio">Inicio</a>
-          <ul class="Menu-Vertical">
-            <li><a href="#inicio">Presentacion</a></li>
-            <li><a href="#objetivos">Objetivos</a></li>
-            <li><a href="#beneficios">Beneficios</a></li>
-            <li><a href="#formulario">Formulario</a></li>
-          </ul>
-        </li>
-        <li><a href="#planes">Planes</a></li>
-        <li><a href="#auspiciadores">Auspiciadores</a></li>
-      </ul>
+  <!-- Botón hamburguesa -->
+  <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
 
-      <div class="botones-header">
-        <a href="iniciar-sesion.html" class="btn-iniciar-sesion">Iniciar sesion</a>
-        <a href="registrarse.html" class="btn-registrarse">Registrarse</a>
-      </div>
-    </nav>
+  <!-- Contenedor del menú -->
+  <div class="menu-container">
+    <ul class="Menu-Horizontal">
+      <li>
+        <a href="#inicio">Inicio</a>
+        <ul class="Menu-Vertical">
+          <li><a href="#inicio">Presentacion</a></li>
+          <li><a href="#objetivos">Objetivos</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#formulario">Formulario</a></li>
+        </ul>
+      </li>
+      <li><a href="#planes">Planes</a></li>
+      <li><a href="#auspiciadores">Auspiciadores</a></li>
+    </ul>
+
+    <div class="botones-header">
+      <a href="iniciar-sesion.html" class="btn-iniciar-sesion">Iniciar sesion</a>
+      <a href="registrarse.html" class="btn-registrarse">Registrarse</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu-container");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("menu-activo");
+  });
+</script>
 
     <!-- Sección 1: Hero / Pantalla Principal -->
     <section class="seccion-hero" id="inicio">
@@ -165,28 +180,29 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
-        <div class="footer-item">
-          <img src="assets/iconos/Ico_Person.png" alt="Icono Persona" class="footer-icon" />
-          <a href="quienes-somos.html" class="footer-titulo">¿Quienes somos?</a>
-          <p class="footer-descripcion">Conocenos</p>
+        <div class="footer-brand">
+          <img src="assets/img/logotipo.png" alt="Logotipo Sabores" class="footer-logo" />
+          <p>
+            Recetas, planes y experiencias gastronómicas reunidas en un solo lugar.
+            Sabores del Mundo comparte inspiración culinaria todos los días.
+          </p>
         </div>
 
-        <div class="footer-item">
-          <img src="assets/iconos/Ico_Caracte.png" alt="Icono Caracteristicas" class="footer-icon" />
-          <a href="caracteristicas.html" class="footer-titulo">Caracteristicas</a>
-          <p class="footer-descripcion">Estas son nuestras caracteristicas</p>
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Términos y Condiciones</a>
+          <a href="#">Protección de Datos</a>
         </div>
 
-        <div class="footer-item">
-          <img src="assets/iconos/Ico_Vision.png" alt="Icono Vision" class="footer-icon" />
-          <a href="vision.html" class="footer-titulo">Vision</a>
-          <p class="footer-descripcion">Lideres en recetas</p>
-        </div>
-
-        <div class="footer-item">
-          <img src="assets/iconos/Ico_Red.png" alt="Icono Redes" class="footer-icon" />
-          <a href="redes.html" class="footer-titulo">Siguenos</a>
-          <p class="footer-descripcion">Nuestras redes</p>
+        <!-- Redes sociales -->
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" class="social-icon" /></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Instagram" class="social-icon" /></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" class="social-icon" /></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145806.png" alt="Twitter" class="social-icon" /></a>
         </div>
       </div>
     </footer>
