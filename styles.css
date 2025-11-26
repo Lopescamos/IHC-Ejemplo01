@@ -1,91 +1,30 @@
-/* ====== FUENTE GLOBAL ====== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
-
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-.menu-toggle {
-  font-size: 32px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none; /* Oculto en pantallas grandes */
-  color: #333;
-}
-
-/* Contenedor del menú por defecto en pantallas grandes */
-.menu-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-@media (max-width: 850px) {
-  /* Mostrar hamburguesa */
-  .menu-toggle {
-    display: block;
-  }
-
-  /* Ocultar menú horizontal al inicio */
-  .menu-container {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: white;
-    padding: 20px 0;
-    border-top: 1px solid #ddd;
-  }
-
-  /* Mostrar cuando se active */
-  .menu-container.menu-activo {
-    display: flex;
-  }
-
-  /* Ajustar menú horizontal a formato vertical */
-  .Menu-Horizontal {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    gap: 15px;
-  }
-
-  /* Submenú vertical dentro del responsive */
-  .Menu-Vertical {
-    position: static;
-    display: none;
-    background: none;
-    box-shadow: none;
-  }
-
-  /* Mostrar submenu al hacer hover (opcional) */
-  .Menu-Horizontal > li:hover .Menu-Vertical {
-    display: block;
-  }
-
-  /* Botones iniciar sesión / registrarse */
-  .botones-header {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    gap: 12px;
-    margin-top: 15px;
-  }
-}
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* Banner de navegación */
 .top-header {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+  max-width: 100%;
   background-color: white;
   display: flex;
   align-items: center;
@@ -94,6 +33,36 @@ body {
   z-index: 999;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  margin: 0;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #432d0d;
+  padding: 8px;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+.menu-toggle-activo {
+  transform: rotate(90deg);
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .logo img {
@@ -196,6 +165,10 @@ body {
   min-height: 90vh;
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .cont-gral-hero {
@@ -203,10 +176,11 @@ body {
   justify-content: space-between;
   align-items: stretch;
   max-width: 1400px;
-  margin: auto;
+  margin: 0 auto;
   width: 100%;
   padding: 0;
   min-height: 600px;
+  box-sizing: border-box;
 }
 
 .cont-hero-texto {
@@ -222,12 +196,14 @@ body {
 }
 
 .titulo-principal {
+  font-family: "Poppins", sans-serif;
   font-size: 64px;
-  font-weight: bold;
+  font-weight: 900;
   margin: 0 0 30px 0;
   line-height: 1.2;
   color: white;
   text-align: center;
+  letter-spacing: 2px;
 }
 
 .subtitulo-hero {
@@ -263,19 +239,25 @@ body {
   flex: 0.6;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .cont-hero-imagen img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
+  min-height: 600px;
 }
 
 /* Sección 2: Objetivos */
 .seccion-objetivos {
   padding: 80px 20px;
   background-color: #f5f0e6;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .cont-gral-objetivos {
@@ -283,8 +265,10 @@ body {
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   gap: 60px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cont-obj-texto {
@@ -312,14 +296,19 @@ body {
 .cont-obj-imagen img {
   max-width: 500px;
   width: 100%;
+  height: auto;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
 }
 
 /* Sección 3: Beneficios */
 .seccion-beneficios {
   padding: 80px 20px;
   background-color: #f5f0e6;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .cont-gral-beneficios {
@@ -327,9 +316,11 @@ body {
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   gap: 60px;
   flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cont-benef-texto {
@@ -363,6 +354,14 @@ body {
   border-radius: 15px;
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 992px) {
+  .cont-benef-video iframe {
+    height: auto;
+    min-height: 250px;
+  }
 }
 
 /* Sección 4: Formulario */
@@ -371,6 +370,9 @@ body {
   padding: 60px 20px;
   display: flex;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .div-cont-formulario {
@@ -522,32 +524,109 @@ button[type="submit"]:hover {
 /* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
   .top-header {
+    flex-wrap: wrap;
+    padding: 12px 15px;
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .seccion-hero {
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 0 0;
+    margin: 0;
+  }
+
+  .cont-gral-hero {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 2;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .menu-container {
+    order: 3;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    flex-basis: 100%;
+    justify-content: flex-start;
     flex-direction: column;
-    padding: 15px 20px;
-    gap: 10px;
+    align-items: stretch;
+  }
+
+  .menu-container.menu-activo {
+    max-height: 600px;
+    padding-top: 15px;
   }
 
   .Menu-Horizontal {
-    margin: 15px 0;
-    max-width: 100%;
     flex-direction: column;
-    align-items: center;
-    gap: 6px;
+    align-items: stretch;
+    margin: 0;
+    max-width: 100%;
+    gap: 0;
   }
 
   .Menu-Horizontal li {
-    padding: 6px 0;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .Menu-Horizontal li:last-child {
+    border-bottom: none;
+  }
+
+  .Menu-Horizontal li > a {
+    display: block;
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+  .Menu-Vertical {
+    position: static;
+    display: none;
+    width: 100%;
+    box-shadow: none;
+    background-color: #f9f9f9;
+    border-radius: 0;
+    margin-top: 0;
+  }
+
+  .Menu-Horizontal li:hover .Menu-Vertical,
+  .Menu-Horizontal li:active .Menu-Vertical {
+    display: block;
+  }
+
+  .Menu-Vertical li {
+    padding: 10px 40px;
+  }
+
+  .botones-header {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
   }
 
   .botones-header a {
     width: 100%;
     text-align: center;
-  }
-
-  .botones-header {
-    width: 100%;
-    justify-content: center;
-    margin-top: 10px;
+    padding: 12px 16px;
   }
 
   .cont-gral-hero {
@@ -556,27 +635,63 @@ button[type="submit"]:hover {
 
   .cont-hero-texto {
     width: 100%;
-    padding: 40px 30px;
+    padding: 40px 20px;
     min-height: auto;
+    box-sizing: border-box;
+  }
+
+  .cont-hero-imagen {
+    width: 100%;
+    height: 400px;
+    min-height: 400px;
+    box-sizing: border-box;
   }
 
   .titulo-principal {
     font-size: 42px;
   }
 
-  .cont-hero-imagen {
+  .cont-hero-imagen img {
+    min-height: 400px;
+    object-fit: cover;
+    object-position: center;
     width: 100%;
-    height: 400px;
+    display: block;
+  }
+
+  .seccion-objetivos,
+  .seccion-beneficios {
+    padding: 50px 15px;
   }
 
   .cont-gral-objetivos,
   .cont-gral-beneficios {
     flex-direction: column;
+    gap: 30px;
+    padding: 0;
+    margin: 0 auto;
   }
 
-  .cont-obj-imagen img,
+  .cont-obj-imagen {
+    width: 100%;
+  }
+
+  .cont-obj-imagen img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .cont-benef-video {
+    width: 100%;
+  }
+
   .cont-benef-video iframe {
     max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .footer-container {
@@ -593,20 +708,40 @@ button[type="submit"]:hover {
 }
 
 @media (max-width: 480px) {
+  .top-header {
+    padding: 10px 15px;
+  }
+
   .titulo-principal {
     font-size: 36px;
+    letter-spacing: 1px;
   }
 
   .cont-hero-texto {
-    padding: 40px 20px;
+    padding: 30px 15px;
+  }
+
+  .seccion-hero {
+    padding: 70px 0 0;
   }
 
   .btn-descargar {
     width: 100%;
+    padding: 12px 30px;
+    font-size: 16px;
   }
 
   .cont-gral-hero {
     min-height: auto;
+  }
+
+  .cont-hero-imagen {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .cont-hero-imagen img {
+    min-height: 300px;
   }
 
   .cont-obj-texto h2,
@@ -617,6 +752,15 @@ button[type="submit"]:hover {
   .btn-iniciar-sesion,
   .btn-registrarse {
     font-size: 12px;
+    padding: 10px 14px;
+  }
+
+  .seccion-formulario {
+    padding: 50px 15px;
+  }
+
+  .div-cont-formulario {
+    padding: 30px 20px;
   }
 }
 
@@ -661,7 +805,7 @@ button[type="submit"]:hover {
 }
 
 .btn-retroceder img {
-  width: 48px;
+  width: 32px;
   height: auto;
 }
 
@@ -862,7 +1006,7 @@ button[type="submit"]:hover {
   }
 
   .btn-retroceder img {
-    width: 36px;
+    width: 24px;
   }
 
   .login-form-container {
